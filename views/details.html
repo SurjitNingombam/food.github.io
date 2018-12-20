@@ -1,0 +1,58 @@
+<div class="details-bg">
+	<div class="container">
+		<div class="row ">
+			<div class="col-md-4">
+				<div class="thumbnail_bg" style="background: url({{resDetails.featured_image == ''? 'static/img/default.jpg': resDetails.featured_image}}) center no-repeat;background-size: cover;"></div>
+			</div>
+			<div class="col-md-8">
+				<div class="rating" style="background-color: #{{resDetails.user_rating.rating_color}};width:75px;height:50px;">{{resDetails.user_rating.aggregate_rating}}<span style="display:block;font-size: 12px;">{{resDetails.user_rating.votes}} votes</span></div>
+				<h4 class="detail-title">{{resDetails.name}}</h4>
+                <p class="detail-subtitle">{{resDetails.location.locality_verbose}} | Costs <i class="fa fa-inr"></i> {{resDetails.average_cost_for_two}} for two</p>
+                <p class="detail-subtitle" style="margin-top: 20px;">{{resDetails.cuisines}}</p>
+                <p class="detail-subtitle">{{resDetails.location.address}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12" style="margin-top: 20px;">
+			<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="250">
+				<ul class="nav navbar-nav">
+				  <li ng-repeat="menu in resDailymenu"><a href="" ng-click="scrollTo(menu.name)">{{menu.name}}</a></li>
+				  <li><a href="" ng-click="scrollTo('reviews')" >Reviews</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-md-12" id="{{menu.name}}" ng-repeat="menu in resDailymenu" style="margin-top: 20px;">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>{{menu.name}}</h3>
+				</div>
+				<div class="col-md-12" ng-repeat="row in menu.list">
+					<div class="panel panel-default foodBox" >
+						<h3 class="food_icon {{row.type}}">{{row.item}}</h3>
+						<span><i class="fa fa-inr"></i> {{row.price}}</span>
+						<p>{{row.desc}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12" id="reviews" style="margin-top: 20px;">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>REVIEWS SECTION</h3>
+					<div class="rating reviewcount" style="width:100px;height:50px;background-image: linear-gradient(64deg, #26bd99, #219393);">{{resReviews.reviews_count}}<span style="display:block;font-size: 12px;">Reviews Count</span></div>
+				</div>
+				<div class="col-md-12" ng-repeat="item in resReviews.user_reviews">
+					<div class="panel panel-default reviewBox" >
+						<h3>{{item.review.rating_text}}</h3>
+						<h4>{{item.review.user.name}}</h4>
+						<p>{{item.review.review_text}}</p>
+						<div class="rating" style="background-color: #{{item.review.rating_color}}">{{item.review.rating}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

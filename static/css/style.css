@@ -1,0 +1,265 @@
+header{
+    background-color: #cb202d;
+    /*position: fixed;*/
+    /*z-index: 2;*/
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    min-height: 60px;
+    text-align: center;
+    padding: 20px;
+}
+header h1{
+    margin-bottom: 20px;
+    color: #fff;
+}
+footer{
+    background-color: #314151;
+    min-height: 100px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0px;
+}
+nav{
+    display: none;
+}
+.logo{
+    color: #fff;
+    font-size: 24px;
+}
+.logo:hover, .logo:focus{
+    color: #fff;
+    text-decoration: none;
+}
+.sectionContent{
+    /*margin-top: 80px;*/
+    background-image: linear-gradient( to bottom right, rgba(236,236,236,1), rgba(236,236,236,0.6));
+}
+.nearby_title{
+    float: left;
+    font-size: 24px;
+    color: #cb202d;
+}
+.flexdiv{
+    display: flex;
+    align-items: center;
+}
+.detail-title{
+    font-size: 24px;
+    color: #fff;
+    margin-top: 60px;
+}
+.detail-subtitle{
+    color: #fff;
+    font-size: 14px;
+}
+.detail-subtitle span{
+    color: #219393;
+    font-weight: bold;   
+}
+.details-img{
+    padding: 20px;
+}
+.view{
+    display: none;
+}
+.listing{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*background-color: #fff;*/
+}
+.rating{
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 0px 5px;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    border-color: #314151;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.thumbnail .caption{
+    min-height: 90px;
+}
+.thumbnail_bg {
+    height: 250px;
+    width: 100%;
+}
+.list-group-item-heading{
+    font-size: 16px;
+    font-weight: bold;
+}
+.thumbnail .caption p{
+    font-size: 12px;
+}
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+/*.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}*/
+.item.list-group-item .list-group-item-heading{
+    font-size: 24px;
+}
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+    width: 70%;
+    float: left;
+}
+.item.list-group-item
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+.list-group-item .thumbnail_img{
+    width: 30%;
+    float: left;
+}
+.list-group-item .thumbnail_bg{
+    height: 150px;
+}
+.details-bg{
+    background-color: #314151;
+}
+.navbar-inverse{
+    background-color: #314151;
+    border-color: #314151;
+}
+.reviewBox{
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+.foodBox{
+    padding: 15px 30px;
+    border-top: 1px solid #e7e7e7;
+    margin: 0;
+}
+.foodBox span{
+    font-size: 18px;
+    color: #314151;
+    float: left;
+    margin-right: 20px;
+}
+.foodBox p{
+    /*float: right;*/
+    color: #314151;
+    line-height: 25px;
+    /*color: #797979;*/
+    margin-bottom: 0px;
+}
+.reviewBox h3, .foodBox h3{
+    margin-top: 10px;
+}
+.food_icon{
+    padding: 0 0 0 30px;
+    position: relative;
+    /*line-height: 2;*/
+    color: #a8a8a8;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+.food_icon:before{
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+    border: 1px solid #2ebd59;
+    border-radius: 2px;
+    left: 0;
+    top: 0px;
+}
+.food_icon:after{
+    width: 6px;
+    height: 6px;
+    box-sizing: border-box;
+    background: #2ebd59;
+    border-radius: 50%;
+    left: 4px;
+    top: 4px;
+}
+.food_icon:before, .food_icon:after{
+    content: '';
+    position: absolute;
+}
+.food_icon.semi:before{
+    border: 1px solid #af8b5c;
+}
+.food_icon.semi:after{
+    background: #af8b5c;
+}
+.food_icon.nonveg:before{
+    border-color: #d0021b;
+}
+.food_icon.nonveg:after{
+    background: #d0021b;
+}
+.affix {
+top: 0;
+width: 100%;
+z-index: 9999 !important;
+}
+
+.affix + .container-fluid {
+padding-top: 70px;
+}
+@media (max-width: 767px){
+    .reviewcount{
+        top: -20px;
+    }
+}
+@media (min-width: 768px){
+    .view{
+        display: block;
+        float: right;
+    }
+    nav{
+        display: block;
+    }
+}
