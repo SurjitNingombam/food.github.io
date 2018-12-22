@@ -30,7 +30,7 @@ app.controller('homeController',function($scope, $http){
                 method : "GET",
                 url: "https://developers.zomato.com/api/v2.1/geocode",
                 headers: { 
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                     'user_key' : apiKey
                 },
                 params: {
@@ -73,7 +73,7 @@ app.controller('detailsController',function($scope, $document, $window, $http, $
         method : "GET",
         url: "https://developers.zomato.com/api/v2.1/restaurant",
         headers: { 
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
             'user_key' : apiKey
         },
         params: {
@@ -131,7 +131,7 @@ app.controller('detailsController',function($scope, $document, $window, $http, $
     $http({
         method : "GET",
         url: "https://developers.zomato.com/api/v2.1/reviews",
-        headers: { 'Content-Type': 'application/json',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
             'user_key' : apiKey
         },
         params: {
