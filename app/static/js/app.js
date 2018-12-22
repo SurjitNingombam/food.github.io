@@ -31,7 +31,7 @@ app.controller('homeController',function($scope, $http){
                 url: "https://developers.zomato.com/api/v2.1/geocode",
                 headers: { 
                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                    'user_key' : apiKey
+                    'user-key' : apiKey
                 },
                 params: {
                     lat: lat, 
