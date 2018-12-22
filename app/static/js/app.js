@@ -74,7 +74,7 @@ app.controller('detailsController',function($scope, $document, $window, $http, $
         url: "https://developers.zomato.com/api/v2.1/restaurant",
         headers: { 
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-            'user_key' : apiKey
+            'user-key' : apiKey
         },
         params: {
             res_id: res_id
@@ -132,7 +132,7 @@ app.controller('detailsController',function($scope, $document, $window, $http, $
         method : "GET",
         url: "https://developers.zomato.com/api/v2.1/reviews",
         headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-            'user_key' : apiKey
+            'user-key' : apiKey
         },
         params: {
             res_id: res_id,
